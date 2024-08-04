@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2666CB89-EAC1-4A2C-AE9C-5F1CE326D979}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLS</RootNamespace>
+    <AssemblyName>QLS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="Form\fBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fBaoCao.Designer.cs">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fDangNhap.Designer.cs">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fHoaDon.Designer.cs">
+      <DependentUpon>fHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fKho.Designer.cs">
+      <DependentUpon>fKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fLinhVuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fLinhVuc.Designer.cs">
+      <DependentUpon>fLinhVuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fLoaiSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fLoaiSach.Designer.cs">
+      <DependentUpon>fLoaiSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fNhaXuatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fNhaXuatBan.Designer.cs">
+      <DependentUpon>fNhaXuatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fSach.Designer.cs">
+      <DependentUpon>fSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fSuaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fSuaSach.Designer.cs">
+      <DependentUpon>fSuaSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fSuaTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fSuaTacGia.Designer.cs">
+      <DependentUpon>fSuaTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fTaiKhoan.Designer.cs">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fThemSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fThemSach.Designer.cs">
+      <DependentUpon>fThemSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fThemTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fThemTacGia.Designer.cs">
+      <DependentUpon>fThemTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fThongKe.Designer.cs">
+      <DependentUpon>fThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fViewTong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fViewTong.Designer.cs">
+      <DependentUpon>fViewTong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fXoaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fXoaSach.Designer.cs">
+      <DependentUpon>fXoaSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\fXoaTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\fXoaTacGia.Designer.cs">
+      <DependentUpon>fXoaTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Toolbox_Custom\Button_Custom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Toolbox_Custom\CheckBox_Custom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Toolbox_Custom\Color_Switch_Custtom.cs" />
+    <Compile Include="_Toolbox_Custom\Combobox_Custom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Toolbox_Custom\Crop_PictureBox_Custom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Toolbox_Custom\Crop_PictureBox_Custom.Designer.cs">
+      <DependentUpon>Crop_PictureBox_Custom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Toolbox_Custom\DateTimePicker_Custom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Toolbox_Custom\PictureBox_Custom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Toolbox_Custom\RadioButton_Custom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Toolbox_Custom\Support_Switch_Custom.cs" />
+    <Compile Include="_Toolbox_Custom\Switch_Custom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Toolbox_Custom\Textbox_Custom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Toolbox_Custom\Textbox_Custom.designer.cs">
+      <DependentUpon>Textbox_Custom.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\fBaoCao.resx">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fDangNhap.resx">
+      <DependentUpon>fDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fHoaDon.resx">
+      <DependentUpon>fHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fKho.resx">
+      <DependentUpon>fKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fLinhVuc.resx">
+      <DependentUpon>fLinhVuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fLoaiSach.resx">
+      <DependentUpon>fLoaiSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fNhaXuatBan.resx">
+      <DependentUpon>fNhaXuatBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fSach.resx">
+      <DependentUpon>fSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fSuaSach.resx">
+      <DependentUpon>fSuaSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fSuaTacGia.resx">
+      <DependentUpon>fSuaTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fTaiKhoan.resx">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fThemSach.resx">
+      <DependentUpon>fThemSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fThemTacGia.resx">
+      <DependentUpon>fThemTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fThongKe.resx">
+      <DependentUpon>fThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fViewTong.resx">
+      <DependentUpon>fViewTong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fXoaSach.resx">
+      <DependentUpon>fXoaSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\fXoaTacGia.resx">
+      <DependentUpon>fXoaTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources\Resources.resx" />
+    <EmbeddedResource Include="_Toolbox_Custom\Textbox_Custom.resx">
+      <DependentUpon>Textbox_Custom.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\BG_Error.png" />
+    <Content Include="Resources\BG_Login.png" />
+    <Content Include="Resources\BG_Login_Image_01.png" />
+    <Content Include="Resources\BG_Login_Image_02.png" />
+    <Content Include="Resources\BG_Login_Image_03.png" />
+    <Content Include="Resources\BG_Login_Image_04.png" />
+    <Content Include="Resources\BG_Upload.png" />
+    <Content Include="Resources\BG_Upload_Black.png" />
+    <Content Include="Resources\calendarDark.png" />
+    <Content Include="Resources\calendarWhite.png" />
+    <Content Include="Resources\Coin.png" />
+    <Content Include="Resources\Default_Avt.png" />
+    <Content Include="Resources\Flag VietNam.png" />
+    <Content Include="Resources\Icon.ico" />
+    <Content Include="Resources\Icon.png" />
+    <Content Include="Resources\IconDesktop.ico" />
+    <Content Include="Resources\Icon_Black.png" />
+    <Content Include="Resources\Image_Blur.png" />
+    <Content Include="Resources\Logo.png" />
+    <Content Include="Resources\Logo_BaoCao.png" />
+    <Content Include="Resources\Logo_Black.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
