@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ConnectionString" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=DESKTOP-KE8C8FN\SQLEXPRESS03;Initial Catalog=QLNS;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=LAPTOP-EII1N1V5\SQLEXPR;Initial Catalog=QLNS;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

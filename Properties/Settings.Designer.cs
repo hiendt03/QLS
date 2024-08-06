@@ -25,8 +25,8 @@ namespace QLS.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-KE8C8FN\\SQLEXPRESS03;Initial Catalog=QLNS;Integrated Security" +
-            "=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-EII1N1V5\\SQLEXPR;Initial Catalog=QLNS;Integrated Security=True" +
+            "")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

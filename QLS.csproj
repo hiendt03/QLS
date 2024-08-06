@@ -36,6 +36,10 @@
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -54,7 +58,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\CaiDatDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DTO\EditCompo.cs" />
+    <Compile Include="Form\CaiDat\form_CaiDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\CaiDat\form_CaiDat.Designer.cs">
+      <DependentUpon>form_CaiDat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\fBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,42 @@
     <Compile Include="Form\fXoaTacGia.Designer.cs">
       <DependentUpon>fXoaTacGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\ThongTin\form_CapNhatAnhDaiDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThongTin\form_CapNhatAnhDaiDien.Designer.cs">
+      <DependentUpon>form_CapNhatAnhDaiDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ThongTin\form_ChinhSuaTaiKhoanNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThongTin\form_ChinhSuaTaiKhoanNguoiDung.Designer.cs">
+      <DependentUpon>form_ChinhSuaTaiKhoanNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ThongTin\form_TaoTaiKhoanNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThongTin\form_TaoTaiKhoanNguoiDung.Designer.cs">
+      <DependentUpon>form_TaoTaiKhoanNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ThongTin\form_ThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThongTin\form_ThongTin.Designer.cs">
+      <DependentUpon>form_ThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ThongTin\form_XoaTaiKhoanNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ThongTin\form_XoaTaiKhoanNguoiDung.Designer.cs">
+      <DependentUpon>form_XoaTaiKhoanNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\_FormChinh\form_Chinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\_FormChinh\form_Chinh.Designer.cs">
+      <DependentUpon>form_Chinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_Toolbox_Custom\Button_Custom.cs">
@@ -194,6 +242,9 @@
     <Compile Include="_Toolbox_Custom\Textbox_Custom.designer.cs">
       <DependentUpon>Textbox_Custom.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\CaiDat\form_CaiDat.resx">
+      <DependentUpon>form_CaiDat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\fBaoCao.resx">
       <DependentUpon>fBaoCao.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +295,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\fXoaTacGia.resx">
       <DependentUpon>fXoaTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongTin\form_CapNhatAnhDaiDien.resx">
+      <DependentUpon>form_CapNhatAnhDaiDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongTin\form_ChinhSuaTaiKhoanNguoiDung.resx">
+      <DependentUpon>form_ChinhSuaTaiKhoanNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongTin\form_TaoTaiKhoanNguoiDung.resx">
+      <DependentUpon>form_TaoTaiKhoanNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongTin\form_ThongTin.resx">
+      <DependentUpon>form_ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ThongTin\form_XoaTaiKhoanNguoiDung.resx">
+      <DependentUpon>form_XoaTaiKhoanNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\_FormChinh\form_Chinh.resx">
+      <DependentUpon>form_Chinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

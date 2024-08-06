@@ -81,11 +81,11 @@ namespace QLS
                 if (Login(username, password))
                 {
                     this.Hide();
-                    frmViewTong chinh = new frmViewTong(username);
+                    form_Chinh form = new form_Chinh(username);
                     txbTenDangNhap.Enabled = false;
                     txbMatKhau.Enabled = false;
-                    chinh.Owner = this;
-                    chinh.ShowDialog();
+                    form.Owner = this;
+                    form.ShowDialog();
                     this.Close();
                 }
                 else

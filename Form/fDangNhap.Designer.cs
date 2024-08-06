@@ -54,9 +54,10 @@ namespace QLS
             this.label_Welcome.BackColor = System.Drawing.Color.Transparent;
             this.label_Welcome.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Welcome.ForeColor = System.Drawing.Color.DarkGray;
-            this.label_Welcome.Location = new System.Drawing.Point(420, 188);
+            this.label_Welcome.Location = new System.Drawing.Point(560, 231);
+            this.label_Welcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Welcome.Name = "label_Welcome";
-            this.label_Welcome.Size = new System.Drawing.Size(201, 16);
+            this.label_Welcome.Size = new System.Drawing.Size(251, 19);
             this.label_Welcome.TabIndex = 43;
             this.label_Welcome.Text = "Chào mừng bạn đến với Book!";
             // 
@@ -64,19 +65,21 @@ namespace QLS
             // 
             this.label_Login.AutoSize = true;
             this.label_Login.BackColor = System.Drawing.Color.Transparent;
-            this.label_Login.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Login.Location = new System.Drawing.Point(415, 139);
+            this.label_Login.Font = new System.Drawing.Font("iCiel Cadena", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Login.Location = new System.Drawing.Point(553, 171);
+            this.label_Login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Login.Name = "label_Login";
-            this.label_Login.Size = new System.Drawing.Size(180, 37);
+            this.label_Login.Size = new System.Drawing.Size(210, 55);
             this.label_Login.TabIndex = 42;
             this.label_Login.Text = "Đăng nhập";
             // 
             // pictureBox_Image
             // 
             this.pictureBox_Image.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.pictureBox_Image.Location = new System.Drawing.Point(3, 188);
+            this.pictureBox_Image.Location = new System.Drawing.Point(4, 231);
+            this.pictureBox_Image.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(347, 321);
+            this.pictureBox_Image.Size = new System.Drawing.Size(463, 395);
             this.pictureBox_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_Image.TabIndex = 41;
             this.pictureBox_Image.TabStop = false;
@@ -87,9 +90,10 @@ namespace QLS
             this.label_Loi.BackColor = System.Drawing.Color.Transparent;
             this.label_Loi.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label_Loi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
-            this.label_Loi.Location = new System.Drawing.Point(420, 344);
+            this.label_Loi.Location = new System.Drawing.Point(560, 423);
+            this.label_Loi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Loi.Name = "label_Loi";
-            this.label_Loi.Size = new System.Drawing.Size(295, 20);
+            this.label_Loi.Size = new System.Drawing.Size(393, 25);
             this.label_Loi.TabIndex = 0;
             this.label_Loi.Text = "Lỗi...";
             this.label_Loi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,9 +105,11 @@ namespace QLS
             this.icopbHienMatKhau.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
             this.icopbHienMatKhau.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.icopbHienMatKhau.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icopbHienMatKhau.Location = new System.Drawing.Point(683, 289);
+            this.icopbHienMatKhau.IconSize = 39;
+            this.icopbHienMatKhau.Location = new System.Drawing.Point(911, 356);
+            this.icopbHienMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.icopbHienMatKhau.Name = "icopbHienMatKhau";
-            this.icopbHienMatKhau.Size = new System.Drawing.Size(32, 32);
+            this.icopbHienMatKhau.Size = new System.Drawing.Size(43, 39);
             this.icopbHienMatKhau.TabIndex = 44;
             this.icopbHienMatKhau.TabStop = false;
             this.icopbHienMatKhau.Click += new System.EventHandler(this.icopbHienMatKhau_Click);
@@ -119,15 +125,15 @@ namespace QLS
             this.txbMatKhau.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(22)))), ((int)(((byte)(21)))));
             this.txbMatKhau.IsPlaceHolder = true;
-            this.txbMatKhau.Location = new System.Drawing.Point(420, 289);
-            this.txbMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMatKhau.Location = new System.Drawing.Point(560, 356);
+            this.txbMatKhau.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txbMatKhau.Multiline = false;
             this.txbMatKhau.Name = "txbMatKhau";
-            this.txbMatKhau.Padding = new System.Windows.Forms.Padding(12, 10, 12, 8);
+            this.txbMatKhau.Padding = new System.Windows.Forms.Padding(16, 12, 16, 10);
             this.txbMatKhau.PasswordChar = true;
             this.txbMatKhau.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txbMatKhau.PlaceholderText = "Mật khẩu";
-            this.txbMatKhau.Size = new System.Drawing.Size(295, 37);
+            this.txbMatKhau.Size = new System.Drawing.Size(393, 46);
             this.txbMatKhau.TabIndex = 40;
             this.txbMatKhau.Texts = "";
             this.txbMatKhau.UnderlinedStyle = true;
@@ -142,15 +148,15 @@ namespace QLS
             this.txbTenDangNhap.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTenDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(22)))), ((int)(((byte)(21)))));
             this.txbTenDangNhap.IsPlaceHolder = true;
-            this.txbTenDangNhap.Location = new System.Drawing.Point(420, 244);
-            this.txbTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbTenDangNhap.Location = new System.Drawing.Point(560, 300);
+            this.txbTenDangNhap.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txbTenDangNhap.Multiline = false;
             this.txbTenDangNhap.Name = "txbTenDangNhap";
-            this.txbTenDangNhap.Padding = new System.Windows.Forms.Padding(12, 10, 12, 8);
+            this.txbTenDangNhap.Padding = new System.Windows.Forms.Padding(16, 12, 16, 10);
             this.txbTenDangNhap.PasswordChar = false;
             this.txbTenDangNhap.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txbTenDangNhap.PlaceholderText = "Tài khoản";
-            this.txbTenDangNhap.Size = new System.Drawing.Size(295, 37);
+            this.txbTenDangNhap.Size = new System.Drawing.Size(393, 46);
             this.txbTenDangNhap.TabIndex = 39;
             this.txbTenDangNhap.Texts = "";
             this.txbTenDangNhap.UnderlinedStyle = true;
@@ -164,11 +170,12 @@ namespace QLS
             this.bDangNhap.BorderSize = 0;
             this.bDangNhap.FlatAppearance.BorderSize = 0;
             this.bDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bDangNhap.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
+            this.bDangNhap.Font = new System.Drawing.Font("iCiel Cadena", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bDangNhap.ForeColor = System.Drawing.Color.White;
-            this.bDangNhap.Location = new System.Drawing.Point(420, 384);
+            this.bDangNhap.Location = new System.Drawing.Point(560, 473);
+            this.bDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bDangNhap.Name = "bDangNhap";
-            this.bDangNhap.Size = new System.Drawing.Size(295, 50);
+            this.bDangNhap.Size = new System.Drawing.Size(393, 62);
             this.bDangNhap.TabIndex = 37;
             this.bDangNhap.Text = "Đăng nhập";
             this.bDangNhap.TextColor = System.Drawing.Color.White;
@@ -178,9 +185,10 @@ namespace QLS
             // pictureBox_Icon
             // 
             this.pictureBox_Icon.Image = global::QLS.Properties.Resources.Icon;
-            this.pictureBox_Icon.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox_Icon.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox_Icon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox_Icon.Name = "pictureBox_Icon";
-            this.pictureBox_Icon.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox_Icon.Size = new System.Drawing.Size(33, 31);
             this.pictureBox_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_Icon.TabIndex = 1;
             this.pictureBox_Icon.TabStop = false;
@@ -196,10 +204,11 @@ namespace QLS
             this.button_Close.IconColor = System.Drawing.Color.White;
             this.button_Close.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.button_Close.IconSize = 30;
-            this.button_Close.Location = new System.Drawing.Point(710, 0);
+            this.button_Close.Location = new System.Drawing.Point(947, 0);
+            this.button_Close.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_Close.Name = "button_Close";
-            this.button_Close.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.button_Close.Size = new System.Drawing.Size(30, 30);
+            this.button_Close.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.button_Close.Size = new System.Drawing.Size(40, 37);
             this.button_Close.TabIndex = 0;
             this.button_Close.TabStop = false;
             this.button_Close.UseVisualStyleBackColor = false;
@@ -213,8 +222,9 @@ namespace QLS
             this.panel_Top.Controls.Add(this.button_Close);
             this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Top.Location = new System.Drawing.Point(0, 0);
+            this.panel_Top.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(740, 30);
+            this.panel_Top.Size = new System.Drawing.Size(987, 37);
             this.panel_Top.TabIndex = 45;
             this.panel_Top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Top_MouseDown);
             // 
@@ -223,20 +233,21 @@ namespace QLS
             this.label_Title.AutoSize = true;
             this.label_Title.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label_Title.ForeColor = System.Drawing.Color.White;
-            this.label_Title.Location = new System.Drawing.Point(34, 8);
+            this.label_Title.Location = new System.Drawing.Point(45, 10);
+            this.label_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(68, 15);
+            this.label_Title.Size = new System.Drawing.Size(84, 18);
             this.label_Title.TabIndex = 2;
             this.label_Title.Text = "Đăng nhập";
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::QLS.Properties.Resources.BG_Login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(740, 510);
+            this.ClientSize = new System.Drawing.Size(987, 628);
             this.Controls.Add(this.panel_Top);
             this.Controls.Add(this.icopbHienMatKhau);
             this.Controls.Add(this.label_Welcome);
@@ -248,7 +259,7 @@ namespace QLS
             this.Controls.Add(this.label_Loi);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP TÀI KHOẢN";
