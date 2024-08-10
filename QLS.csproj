@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +34,66 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.Engine.13.0.4003\lib\net40\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.ClientDoc.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommLayer.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommonControls.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.Controllers.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.DataSetConversion.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.ObjectFactory.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.Prompting.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.ReportAppServer.XmlSerialize.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>packages\CrystalReports.Shared.13.0.4003\lib\net40\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
@@ -43,7 +102,10 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -60,153 +122,109 @@
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\CaiDatDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\SachDAO.cs" />
+    <Compile Include="DTO\ChiTietHoaDon.cs" />
     <Compile Include="DTO\EditCompo.cs" />
-    <Compile Include="Form\CaiDat\form_CaiDat.cs">
+    <Compile Include="Forms\CaiDat\form_CaiDat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\CaiDat\form_CaiDat.Designer.cs">
+    <Compile Include="Forms\CaiDat\form_CaiDat.Designer.cs">
       <DependentUpon>form_CaiDat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fBaoCao.cs">
+    <Compile Include="Forms\fDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fBaoCao.Designer.cs">
-      <DependentUpon>fBaoCao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\fDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\fDangNhap.Designer.cs">
+    <Compile Include="Forms\fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fHoaDon.cs">
+    <Compile Include="Forms\POS\form_Bill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fHoaDon.Designer.cs">
-      <DependentUpon>fHoaDon.cs</DependentUpon>
+    <Compile Include="Forms\POS\form_Bill.Designer.cs">
+      <DependentUpon>form_Bill.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fKho.cs">
+    <Compile Include="Forms\POS\form_POS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fKho.Designer.cs">
-      <DependentUpon>fKho.cs</DependentUpon>
+    <Compile Include="Forms\POS\form_POS.Designer.cs">
+      <DependentUpon>form_POS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fLinhVuc.cs">
+    <Compile Include="Forms\Sach\form_CapNhatAnh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fLinhVuc.Designer.cs">
-      <DependentUpon>fLinhVuc.cs</DependentUpon>
+    <Compile Include="Forms\Sach\form_CapNhatAnh.Designer.cs">
+      <DependentUpon>form_CapNhatAnh.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fLoaiSach.cs">
+    <Compile Include="Forms\Sach\form_ChinhSuaSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fLoaiSach.Designer.cs">
-      <DependentUpon>fLoaiSach.cs</DependentUpon>
+    <Compile Include="Forms\Sach\form_ChinhSuaSach.Designer.cs">
+      <DependentUpon>form_ChinhSuaSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fNhaXuatBan.cs">
+    <Compile Include="Forms\Sach\form_Sach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fNhaXuatBan.Designer.cs">
-      <DependentUpon>fNhaXuatBan.cs</DependentUpon>
+    <Compile Include="Forms\Sach\form_Sach.Designer.cs">
+      <DependentUpon>form_Sach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fSach.cs">
+    <Compile Include="Forms\Sach\form_TaoSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fSach.Designer.cs">
-      <DependentUpon>fSach.cs</DependentUpon>
+    <Compile Include="Forms\Sach\form_TaoSach.Designer.cs">
+      <DependentUpon>form_TaoSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fSuaSach.cs">
+    <Compile Include="Forms\Sach\form_XoaSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fSuaSach.Designer.cs">
-      <DependentUpon>fSuaSach.cs</DependentUpon>
+    <Compile Include="Forms\Sach\form_XoaSach.Designer.cs">
+      <DependentUpon>form_XoaSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\fSuaTacGia.cs">
+    <Compile Include="Forms\ThongTin\form_CapNhatAnhDaiDien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\fSuaTacGia.Designer.cs">
-      <DependentUpon>fSuaTacGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\fTaiKhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\fTaiKhoan.Designer.cs">
-      <DependentUpon>fTaiKhoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\fThemSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\fThemSach.Designer.cs">
-      <DependentUpon>fThemSach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\fThemTacGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\fThemTacGia.Designer.cs">
-      <DependentUpon>fThemTacGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\fThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\fThongKe.Designer.cs">
-      <DependentUpon>fThongKe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\fViewTong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\fViewTong.Designer.cs">
-      <DependentUpon>fViewTong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\fXoaSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\fXoaSach.Designer.cs">
-      <DependentUpon>fXoaSach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\fXoaTacGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\fXoaTacGia.Designer.cs">
-      <DependentUpon>fXoaTacGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\ThongTin\form_CapNhatAnhDaiDien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\ThongTin\form_CapNhatAnhDaiDien.Designer.cs">
+    <Compile Include="Forms\ThongTin\form_CapNhatAnhDaiDien.Designer.cs">
       <DependentUpon>form_CapNhatAnhDaiDien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\ThongTin\form_ChinhSuaTaiKhoanNguoiDung.cs">
+    <Compile Include="Forms\ThongTin\form_ChinhSuaTaiKhoanNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\ThongTin\form_ChinhSuaTaiKhoanNguoiDung.Designer.cs">
+    <Compile Include="Forms\ThongTin\form_ChinhSuaTaiKhoanNguoiDung.Designer.cs">
       <DependentUpon>form_ChinhSuaTaiKhoanNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\ThongTin\form_TaoTaiKhoanNguoiDung.cs">
+    <Compile Include="Forms\ThongTin\form_TaoTaiKhoanNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\ThongTin\form_TaoTaiKhoanNguoiDung.Designer.cs">
+    <Compile Include="Forms\ThongTin\form_TaoTaiKhoanNguoiDung.Designer.cs">
       <DependentUpon>form_TaoTaiKhoanNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\ThongTin\form_ThongTin.cs">
+    <Compile Include="Forms\ThongTin\form_ThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\ThongTin\form_ThongTin.Designer.cs">
+    <Compile Include="Forms\ThongTin\form_ThongTin.Designer.cs">
       <DependentUpon>form_ThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\ThongTin\form_XoaTaiKhoanNguoiDung.cs">
+    <Compile Include="Forms\ThongTin\form_XoaTaiKhoanNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\ThongTin\form_XoaTaiKhoanNguoiDung.Designer.cs">
+    <Compile Include="Forms\ThongTin\form_XoaTaiKhoanNguoiDung.Designer.cs">
       <DependentUpon>form_XoaTaiKhoanNguoiDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\_FormChinh\form_Chinh.cs">
+    <Compile Include="Forms\_FormChinh\form_Chinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\_FormChinh\form_Chinh.Designer.cs">
+    <Compile Include="Forms\_FormChinh\form_Chinh.Designer.cs">
       <DependentUpon>form_Chinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HoaDon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="_Toolbox_Custom\Button_Custom.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -242,76 +260,49 @@
     <Compile Include="_Toolbox_Custom\Textbox_Custom.designer.cs">
       <DependentUpon>Textbox_Custom.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\CaiDat\form_CaiDat.resx">
+    <EmbeddedResource Include="Forms\CaiDat\form_CaiDat.resx">
       <DependentUpon>form_CaiDat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fBaoCao.resx">
-      <DependentUpon>fBaoCao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\fDangNhap.resx">
+    <EmbeddedResource Include="Forms\fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fHoaDon.resx">
-      <DependentUpon>fHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\POS\form_Bill.resx">
+      <DependentUpon>form_Bill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fKho.resx">
-      <DependentUpon>fKho.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\POS\form_POS.resx">
+      <DependentUpon>form_POS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fLinhVuc.resx">
-      <DependentUpon>fLinhVuc.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Sach\form_CapNhatAnh.resx">
+      <DependentUpon>form_CapNhatAnh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fLoaiSach.resx">
-      <DependentUpon>fLoaiSach.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Sach\form_ChinhSuaSach.resx">
+      <DependentUpon>form_ChinhSuaSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fNhaXuatBan.resx">
-      <DependentUpon>fNhaXuatBan.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Sach\form_Sach.resx">
+      <DependentUpon>form_Sach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fSach.resx">
-      <DependentUpon>fSach.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Sach\form_TaoSach.resx">
+      <DependentUpon>form_TaoSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fSuaSach.resx">
-      <DependentUpon>fSuaSach.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Sach\form_XoaSach.resx">
+      <DependentUpon>form_XoaSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\fSuaTacGia.resx">
-      <DependentUpon>fSuaTacGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\fTaiKhoan.resx">
-      <DependentUpon>fTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\fThemSach.resx">
-      <DependentUpon>fThemSach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\fThemTacGia.resx">
-      <DependentUpon>fThemTacGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\fThongKe.resx">
-      <DependentUpon>fThongKe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\fViewTong.resx">
-      <DependentUpon>fViewTong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\fXoaSach.resx">
-      <DependentUpon>fXoaSach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\fXoaTacGia.resx">
-      <DependentUpon>fXoaTacGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\ThongTin\form_CapNhatAnhDaiDien.resx">
+    <EmbeddedResource Include="Forms\ThongTin\form_CapNhatAnhDaiDien.resx">
       <DependentUpon>form_CapNhatAnhDaiDien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\ThongTin\form_ChinhSuaTaiKhoanNguoiDung.resx">
+    <EmbeddedResource Include="Forms\ThongTin\form_ChinhSuaTaiKhoanNguoiDung.resx">
       <DependentUpon>form_ChinhSuaTaiKhoanNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\ThongTin\form_TaoTaiKhoanNguoiDung.resx">
+    <EmbeddedResource Include="Forms\ThongTin\form_TaoTaiKhoanNguoiDung.resx">
       <DependentUpon>form_TaoTaiKhoanNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\ThongTin\form_ThongTin.resx">
+    <EmbeddedResource Include="Forms\ThongTin\form_ThongTin.resx">
       <DependentUpon>form_ThongTin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\ThongTin\form_XoaTaiKhoanNguoiDung.resx">
+    <EmbeddedResource Include="Forms\ThongTin\form_XoaTaiKhoanNguoiDung.resx">
       <DependentUpon>form_XoaTaiKhoanNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\_FormChinh\form_Chinh.resx">
+    <EmbeddedResource Include="Forms\_FormChinh\form_Chinh.resx">
       <DependentUpon>form_Chinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -324,6 +315,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="HoaDon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HoaDon.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Resources.resx" />
     <EmbeddedResource Include="_Toolbox_Custom\Textbox_Custom.resx">
       <DependentUpon>Textbox_Custom.cs</DependentUpon>
@@ -365,5 +360,9 @@
     <Content Include="Resources\Logo_BaoCao.png" />
     <Content Include="Resources\Logo_Black.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

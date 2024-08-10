@@ -32,5 +32,16 @@ namespace QLS.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-EII1N1V5\\SQLEXPR;Initial Catalog=QLNS;Integrated Security=True" +
+            ";TrustServerCertificate=True")]
+        public string QLNSConnectionString {
+            get {
+                return ((string)(this["QLNSConnectionString"]));
+            }
+        }
     }
 }

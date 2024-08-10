@@ -7,6 +7,7 @@ namespace QLS.Resources
     public class AccountDAO
     {
         private static AccountDAO instance;
+        private const int PgSize = 20;
         public static AccountDAO Instance
         {
             get { if (instance == null) instance = new AccountDAO(); return instance; }
@@ -15,9 +16,10 @@ namespace QLS.Resources
 
         private AccountDAO() { }
 
-        public bool Login(string username, string password, DataTable result)
+        public bool Login(string username, string password)
         {
-            string query = "SELECT * FROM TAIKHOAN WHERE USERNAME = @username AND PASS_WORD = @password AND ROLE = 1";
+            DataTable result = new DataTable();
+            string query = "SELECT * FROM TAIKHOAN WHERE USERNAME = @username AND PASS_WORD = @password";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@username", username),
@@ -102,7 +104,18 @@ namespace QLS.Resources
         {
             int data = DataProvider.Instance.ExecuteNonQuery("INSERT INTO TAIKHOAN VALUES ('" + tk + "', '" + mk + "', " + role + ", '" + note + "', @avatar, N'" + fullname + "', '" + phone + "')", 
                 new SqlParameter[] { new SqlParameter("@avatar", avatar) });
+
+            int data1 = ThemCaiDat(tk) ? 1 : 0;
             
+            return data > 0 && data1 > 0;
+        }
+
+        public bool ThemCaiDat(string tk)
+        {
+           string query = "INSERT INTO CAIDAT VALUES ('" + tk + "', 0, 0, 0, 1)";
+
+            int data = DataProvider.Instance.ExecuteNonQuery(query);
+
             return data > 0;
         }
 
@@ -120,13 +133,13 @@ namespace QLS.Resources
             DataTable dt = new DataTable();
             if (page == 1)
             {
-                cmd = "Select TOP 20 * from TAIKHOAN ORDER BY USERNAME";
+                cmd = "Select TOP " + PgSize + " * from TAIKHOAN ORDER BY USERNAME";
             }
             else
             {
                 int PreviousPageOffSet = (page - 1) * 20;
 
-                cmd = @"Select TOP 20 * from TAIKHOAN WHERE USERNAME NOT IN (Select TOP " + PreviousPageOffSet + " USERNAME from TAIKHOAN ORDER BY TAI_KHOAN)";
+                cmd = @"Select TOP " + PgSize + " * from TAIKHOAN WHERE USERNAME NOT IN (Select TOP " + PreviousPageOffSet + " USERNAME from TAIKHOAN ORDER BY TAI_KHOAN)";
             }
             try
             {
@@ -153,13 +166,13 @@ namespace QLS.Resources
                 if (page == 1)
                 {
                    
-                    cmd = "Select TOP 20 * from TAIKHOAN WHERE USERNAME like '%" + keyword + "%' ORDER BY USERNAME";
+                    cmd = "Select TOP " + PgSize + " * from TAIKHOAN WHERE USERNAME like '%" + keyword + "%' ORDER BY USERNAME";
                 }
                 else
                 {
                    int PreviousPageOffSet = (page - 1) * 20;
                    
-                   cmd = @"Select TOP  20 * from TAIKHOAN WHERE USERNAME like '%" + keyword + "%' " +
+                   cmd = @"Select TOP " + PgSize + " * from TAIKHOAN WHERE USERNAME like '%" + keyword + "%' " +
                         "AND USERNAME NOT IN (Select TOP " + PreviousPageOffSet + " USERNAME " +
                         "from TAIKHOAN WHERE USERNAME like '%" + keyword + "%' ORDER BY USERNAME)";
 
