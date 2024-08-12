@@ -22,7 +22,7 @@ namespace QLS
         string tk;
         bool check_giaodien, check_ngonngu;
         private int TotalPage = 0;
-        private const int PgSize = 20;
+        private const int PgSize = 10;
         public int CurrentPageIndex = 1;
         public int TotalPageSearch = 0;
         public int CurrentPageIndexSearch = 1;

@@ -363,6 +363,7 @@
             this.Controls.Add(this.pictureBox_AnhDaiDien);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "form_TaoSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_TaoSach";
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();

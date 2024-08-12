@@ -13,7 +13,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CrystalDecisions.CrystalReports.Engine;
-using CrystalDecisions.Shared;
 using QLS.DTO;
 
 
@@ -36,6 +35,7 @@ namespace QLS.Forms.POS
             this.tk = tk;
             label_Loi1.Text = "";
             Update_GiaoDien_NgonNgu();
+            UpdateColorApp();
             dataGridView.DataSource = SachDAO.Instance.GetCurrentRecords(1, 100);
             listView1.Clear(); 
             listView1.View = View.Details; 
@@ -75,7 +75,6 @@ namespace QLS.Forms.POS
 
                 e.Handled = true;
             }
-
         }
 
         private void form_POS_Load(object sender, EventArgs e)
@@ -270,7 +269,7 @@ namespace QLS.Forms.POS
             {
                 ListViewItem item = new ListViewItem(cthd.MASACH);
                 item.SubItems.Add(cthd.SOLUONG.ToString());
-                item.SubItems.Add(cthd.THANHTIEN.ToString());
+                item.SubItems.Add(cthd.THANHTIEN.ToString("#,##0"));
                 listView1.Items.Add(item);
             }
 
@@ -423,7 +422,36 @@ namespace QLS.Forms.POS
             dataGridView.Columns[5].HeaderText = "Price";
 
         }
-        
+
+        private void dataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridView.Columns[e.ColumnIndex].Name == "clGIABIA") // Tên cột cần định dạng
+            {
+                if (e.Value != null)
+                {
+                    decimal value = Convert.ToDecimal(e.Value);
+                    e.Value = value.ToString("#,##0"); // Định dạng với dấu phẩy và đơn vị tiền tệ
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
+        public void UpdateColorApp()
+        {
+            dataGridView.ColumnHeadersDefaultCellStyle.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            dataGridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            button_Xoa.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            textbox_TimKiem.BorderColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            textbox_TimKiem.BorderFocusColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            textbox_SDT.BorderColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            textbox_SDT.BorderFocusColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            textbox_TenKH.BorderColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            textbox_TenKH.BorderFocusColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            button_ThanhToan.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            button_ThemKhach.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+            button_TimKhach.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
+        }
+
     }
 
 

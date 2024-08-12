@@ -13,6 +13,7 @@ using System.Text;
 using System.Windows.Forms;
 using QLS.Resources;
 using QLS.Forms.POS;
+using QLS.Forms.ThongKe;
 
 
 
@@ -518,7 +519,6 @@ namespace QLS
             //Form Chính
             button_ThongTin.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
             button_KhuyenMai.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
-            button_BangXepHang.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
             button_HopThu.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
             button_DonDangKyIdol.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
             button_BaoCao.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
@@ -528,7 +528,6 @@ namespace QLS
 
             button_ThongTin.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
             button_KhuyenMai.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
-            button_BangXepHang.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
             button_HopThu.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
             button_DonDangKyIdol.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
             button_BaoCao.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
@@ -578,7 +577,6 @@ namespace QLS
             //Form chính
             button_ThongTin.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
             button_KhuyenMai.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
-            button_BangXepHang.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
             button_HopThu.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
             button_DonDangKyIdol.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
             button_BaoCao.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
@@ -588,7 +586,6 @@ namespace QLS
 
             button_ThongTin.IconColor = CaiDatDAO.Instance.color_Text_White_01;
             button_KhuyenMai.IconColor = CaiDatDAO.Instance.color_Text_White_01;
-            button_BangXepHang.IconColor = CaiDatDAO.Instance.color_Text_White_01;
             button_HopThu.IconColor = CaiDatDAO.Instance.color_Text_White_01;
             button_DonDangKyIdol.IconColor = CaiDatDAO.Instance.color_Text_White_01;
             button_BaoCao.IconColor = CaiDatDAO.Instance.color_Text_White_01;
@@ -642,7 +639,6 @@ namespace QLS
             //Form Chính
             button_ThongTin.Text = "Thông tin";
             button_KhuyenMai.Text = "Sách";
-            button_BangXepHang.Text = "Nhập kho";
             button_HopThu.Text = "Khách hàng";
             button_DonDangKyIdol.Text = "Máy POS";
             button_BaoCao.Text = "Hóa đơn";
@@ -658,7 +654,6 @@ namespace QLS
         {
             //Form Chính
             button_ThongTin.Text = "Information";
-            button_BangXepHang.Text = "Import";
             button_KhuyenMai.Text = "Book";
             button_HopThu.Text = "Customer";
             button_DonDangKyIdol.Text = "POS";
@@ -811,7 +806,6 @@ namespace QLS
 
             button_ThongTin.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             button_KhuyenMai.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
-            button_BangXepHang.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             button_HopThu.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             button_DonDangKyIdol.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             button_BaoCao.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
@@ -867,8 +861,8 @@ namespace QLS
         private void button_HopThu_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //Update_GiaoDien_NgonNgu();
-            //OpenChildForm(new form_HopThu(tk));
+            Update_GiaoDien_NgonNgu();
+            OpenChildForm(new form_KhachHang(tk));
         }
         private void button_DonDangKyIdol_Click(object sender, EventArgs e)
         {
@@ -879,14 +873,14 @@ namespace QLS
         private void button_BaoCao_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //Update_GiaoDien_NgonNgu();
-            //OpenChildForm(new form_BaoCao(tk));
+            Update_GiaoDien_NgonNgu();
+            OpenChildForm(new form_HoaDon(tk));
         }
         private void button_ThongKe_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            //Update_GiaoDien_NgonNgu();
-            //OpenChildForm(new form_ThongKe(tk));
+            Update_GiaoDien_NgonNgu();
+            OpenChildForm(new form_ThongKe(tk));
         }
         private void button_LichSuHoatDong_Click(object sender, EventArgs e)
         {

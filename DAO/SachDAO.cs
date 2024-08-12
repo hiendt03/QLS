@@ -7,7 +7,7 @@ namespace QLS.Resources
     public class SachDAO
     {
         private static SachDAO instance;
-        private const int PgSize = 20;
+        private const int PgSize = 10;
         public static SachDAO Instance
         {
             get { if (instance == null) instance = new SachDAO(); return instance; }
@@ -26,7 +26,7 @@ namespace QLS.Resources
             }
             else
             {
-                int PreviousPageOffSet = (page - 1) * 20;
+                int PreviousPageOffSet = (page - 1) * PgSize;
 
                 cmd = @"Select TOP " + PgSize + " * from SACH WHERE TENSACH NOT IN (Select TOP " + PreviousPageOffSet + " TENSACH from SACH ORDER BY TENSACH)";
             }
@@ -64,7 +64,7 @@ namespace QLS.Resources
                 }
                 else
                 {
-                    int PreviousPageOffSet = (page - 1) * 20;
+                    int PreviousPageOffSet = (page - 1) * PgSize;
 
                     cmd = @"Select TOP " + PgSize + " * from SACH WHERE TENSACH like '%" + keyword + "%' " +
                          "OR MASACH like '%" + keyword + "%'"+

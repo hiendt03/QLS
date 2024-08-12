@@ -16,7 +16,7 @@ using QLS.Resources;
 
 namespace QLS
 {
-    public partial class form_Sach : Form
+    public partial class form_HoaDon : Form
     {
         public DataGridViewRow row;
         string tk;
@@ -27,15 +27,15 @@ namespace QLS
         public int TotalPageSearch = 0;
         public int CurrentPageIndexSearch = 1;
 
-        public form_Sach(string tk)
+        public form_HoaDon(string tk)
         {
             InitializeComponent();
             this.tk = tk;
             UpdateColorApp();
             Update_GiaoDien_NgonNgu();
             dataGridView.RowTemplate.Height = 40;
-            dataGridView.DataSource = SachDAO.Instance.GetCurrentRecords(CurrentPageIndex);
             CalculateTotalPages();
+            dataGridView.DataSource = HoaDonDAO.Instance.GetCurrentRecords(CurrentPageIndex);
         }
 
         private void btnNxtPage_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace QLS
                     this.CurrentPageIndexSearch++;
                     label_TrangHienTai.Text = CurrentPageIndexSearch.ToString();
                     this.dataGridView.DataSource =
-              SachDAO.Instance.GetCurrentRecordsByKeyword(this.CurrentPageIndexSearch, textbox_TimKiem.Texts);
+              HoaDonDAO.Instance.GetCurrentRecordsByKeyword(this.CurrentPageIndexSearch, textbox_TimKiem.Texts);
                 }
                 if (CurrentPageIndexSearch == TotalPageSearch)
                 {
@@ -79,7 +79,8 @@ namespace QLS
                     button_TienLen.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
                     this.CurrentPageIndex++;
                     label_TrangHienTai.Text = CurrentPageIndex.ToString();
-                    this.dataGridView.DataSource = SachDAO.Instance.GetCurrentRecords(this.CurrentPageIndex);
+                    this.dataGridView.DataSource =
+                HoaDonDAO.Instance.GetCurrentRecords(this.CurrentPageIndex);
                 }
                 if (CurrentPageIndex == TotalPage)
                 {
@@ -113,7 +114,7 @@ namespace QLS
                     this.CurrentPageIndexSearch--;
                     label_TrangHienTai.Text = CurrentPageIndexSearch.ToString();
                     this.dataGridView.DataSource =
-                SachDAO.Instance.GetCurrentRecordsByKeyword(this.CurrentPageIndexSearch, textbox_TimKiem.Texts);
+                HoaDonDAO.Instance.GetCurrentRecordsByKeyword(this.CurrentPageIndexSearch, textbox_TimKiem.Texts);
                 }
                 if (CurrentPageIndexSearch == 1)
                 {
@@ -144,7 +145,7 @@ namespace QLS
                     this.CurrentPageIndex--;
                     label_TrangHienTai.Text = CurrentPageIndex.ToString();
                     this.dataGridView.DataSource =
-                SachDAO.Instance.GetCurrentRecords(this.CurrentPageIndex);
+                HoaDonDAO.Instance.GetCurrentRecords(this.CurrentPageIndex);
                 }
                 if (CurrentPageIndex == 1)
                 {
@@ -171,7 +172,7 @@ namespace QLS
         private void CalculateTotalPages()
         {
             CurrentPageIndex = 1;
-            int rowCount = (int)DataProvider.Instance.ExecuteScalar("SELECT COUNT(*) FROM SACH");
+            int rowCount = (int)DataProvider.Instance.ExecuteScalar("SELECT COUNT(*) FROM TAIKHOAN");
             TotalPage = rowCount / PgSize;
 
             if (rowCount % PgSize > 0)
@@ -196,7 +197,7 @@ namespace QLS
         private void CalculateTotalPagesSearch()
         {
             CurrentPageIndexSearch = 1;
-            int rowCount = SachDAO.Instance.CountResult(textbox_TimKiem.Texts);
+            int rowCount = HoaDonDAO.Instance.CountResult(textbox_TimKiem.Texts);
 
 
             TotalPageSearch = rowCount / PgSize;
@@ -229,48 +230,9 @@ namespace QLS
             }
         }
 
-        private void button_Tao_Click(object sender, EventArgs e)
-        {
-            form_TaoSach fttknd = new form_TaoSach(tk);
-            fttknd.Owner = this;
-            fttknd.ShowDialog();
-        }
-        private void button_ChinhSua_Click(object sender, EventArgs e)
-        {
-            if (vt != -1)
-            {
-                form_ChinhSuaSach fcstknd = new form_ChinhSuaSach(row, tk);
-                fcstknd.Owner = this;
-                fcstknd.ShowDialog();
-            }
-        }
-        private void button_Xoa_Click(object sender, EventArgs e)
-        {
-            if (vt != -1)
-            {
-                if (dataGridView.SelectedRows.Count == 1)
-                {
-                    form_XoaSach fxtknd = new form_XoaSach(row, tk);
-                    fxtknd.Owner = this;
-                    fxtknd.ShowDialog();
-                }
-                else
-                {
-                    List<string> listtk = new List<string>();
-                    for (int i = 0; i < dataGridView.SelectedRows.Count; i++)
-                    {
-                        listtk.Add(dataGridView.SelectedRows[i].Cells[0].Value.ToString());
-                    }
-                    form_XoaSach fxtknd = new form_XoaSach(listtk, tk);
-                    fxtknd.Owner = this;
-                    fxtknd.ShowDialog();
-                }
-
-            }
-        }
 
         public int vt = -1;
-        public void form_Sach_Load(object sender, EventArgs e)
+        public void form_HoaDon_Load(object sender, EventArgs e)
         {
             if (!check_giaodien)
             {
@@ -344,10 +306,6 @@ namespace QLS
             panel_Bottom.BackColor = CaiDatDAO.Instance.color_BG_White_02;
             panel_Bottom2.BackColor = CaiDatDAO.Instance.color_BG_White_01;
 
-            button_Tao.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
-            button_ChinhSua.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
-            button_Xoa.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
-
             //Textbox
             textbox_TimKiem.BackColor = CaiDatDAO.Instance.color_BG_White_01;
             textbox_TimKiem.ForeColor = CaiDatDAO.Instance.color_Text_White_02;
@@ -372,10 +330,6 @@ namespace QLS
             this.BackColor = CaiDatDAO.Instance.color_BG_Black_01;
             panel_Bottom.BackColor = CaiDatDAO.Instance.color_BG_Black_02;
             panel_Bottom2.BackColor = CaiDatDAO.Instance.color_BG_Black_01;
-
-            button_Tao.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
-            button_ChinhSua.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
-            button_Xoa.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
 
             //Textbox
             textbox_TimKiem.BackColor = CaiDatDAO.Instance.color_BG_Black_01;
@@ -404,20 +358,12 @@ namespace QLS
         }
         public void Change_Language_VI()
         {
-            button_Tao.Text = "Tạo";
-            button_ChinhSua.Text = "Chỉnh sửa";
-            button_Xoa.Text = "Xóa";
             textbox_TimKiem.PlaceholderText = "Tìm kiếm...";
 
-            dataGridView.Columns[0].HeaderText = "Hình ảnh";
-            dataGridView.Columns[1].HeaderText = "Mã sách";
-            dataGridView.Columns[2].HeaderText = "Tên sách";
-            dataGridView.Columns[3].HeaderText = "Tác giả";
-            dataGridView.Columns[4].HeaderText = "NXB";
-            dataGridView.Columns[5].HeaderText = "Năm xuất bản";
-            dataGridView.Columns[6].HeaderText = "Giá bìa";
-
-            dataGridView.Columns[6].DefaultCellStyle.Format = "N0";
+            dataGridView.Columns[0].HeaderText = "Mã hóa đơn";
+            dataGridView.Columns[1].HeaderText = "Khách hàng";
+            dataGridView.Columns[2].HeaderText = "Tổng tiền";
+            dataGridView.Columns[3].HeaderText = "Ngày lập";
         }
 
         private void button_TienLen2_Click(object sender, EventArgs e)
@@ -432,7 +378,7 @@ namespace QLS
                     this.CurrentPageIndexSearch = TotalPageSearch;
                     label_TrangHienTai.Text = CurrentPageIndexSearch.ToString();
                     this.dataGridView.DataSource =
-              SachDAO.Instance.GetCurrentRecordsByKeyword(this.TotalPageSearch, textbox_TimKiem.Texts);
+              HoaDonDAO.Instance.GetCurrentRecordsByKeyword(this.TotalPageSearch, textbox_TimKiem.Texts);
                 }
                 if (CurrentPageIndexSearch == TotalPageSearch)
                 {
@@ -461,7 +407,8 @@ namespace QLS
                     button_TienLen2.BackColor = Color.DarkGray;
                     this.CurrentPageIndex = TotalPage;
                     label_TrangHienTai.Text = CurrentPageIndex.ToString();
-                    this.dataGridView.DataSource = SachDAO.Instance.GetCurrentRecords(this.TotalPage);
+                    this.dataGridView.DataSource =
+                HoaDonDAO.Instance.GetCurrentRecords(this.TotalPage);
                 }
                 if (CurrentPageIndex == TotalPage)
                 {
@@ -497,7 +444,7 @@ namespace QLS
                     this.CurrentPageIndexSearch = 1;
                     label_TrangHienTai.Text = CurrentPageIndexSearch.ToString();
                     this.dataGridView.DataSource =
-                SachDAO.Instance.GetCurrentRecordsByKeyword(this.CurrentPageIndexSearch, textbox_TimKiem.Texts);
+                HoaDonDAO.Instance.GetCurrentRecordsByKeyword(this.CurrentPageIndexSearch, textbox_TimKiem.Texts);
                 }
                 if (CurrentPageIndexSearch == 1)
                 {
@@ -528,7 +475,7 @@ namespace QLS
                     this.CurrentPageIndex = 1;
                     label_TrangHienTai.Text = CurrentPageIndex.ToString();
                     this.dataGridView.DataSource =
-                SachDAO.Instance.GetCurrentRecords(this.CurrentPageIndex);
+                HoaDonDAO.Instance.GetCurrentRecords(this.CurrentPageIndex);
                 }
                 if (CurrentPageIndex == 1)
                 {
@@ -555,51 +502,39 @@ namespace QLS
 
         public void Change_Language_EN()
         {
-            button_Tao.Text = "Create";
-            button_ChinhSua.Text = "Edit";
-            button_Xoa.Text = "Delete";
             textbox_TimKiem.PlaceholderText = "Search...";
 
-            dataGridView.Columns[0].HeaderText = "Avatar";
-            dataGridView.Columns[1].HeaderText = "Book ID";
-            dataGridView.Columns[2].HeaderText = "Book Name";
-            dataGridView.Columns[3].HeaderText = "Author";
-            dataGridView.Columns[4].HeaderText = "Publisher";
-            dataGridView.Columns[5].HeaderText = "Publishing Year";
-            dataGridView.Columns[6].HeaderText = "Price";
+            dataGridView.Columns[0].HeaderText = "Bill ID";
+            dataGridView.Columns[1].HeaderText = "Customer";
+            dataGridView.Columns[3].HeaderText = "Total money";
+            dataGridView.Columns[4].HeaderText = "Date created";
         }
 
-        private void dataGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.ColumnIndex == dataGridView.Columns["clAvatar"].Index && e.RowIndex >= 0)
-            {
-                e.PaintBackground(e.CellBounds, true);
-
-                if (e.Value != null)
-                {
-                    Image img = DataProvider.Instance.ByteToImage((byte[])e.Value);
-                    int imgWidth = 35; // Chiều rộng cố định của ảnh
-                    int imgHeight = 35; // Chiều cao cố định của ảnh
-                    int x = e.CellBounds.Left + (e.CellBounds.Width - imgWidth) / 2;
-                    int y = e.CellBounds.Top + (e.CellBounds.Height - imgHeight) / 2;
-                    e.Graphics.DrawImage(img, new Rectangle(x, y, imgWidth, imgHeight));
-                }
-
-                e.Handled = true;
-            }
-        }
 
         private void button_TimKiem_Click(object sender, EventArgs e)
         {
             if (textbox_TimKiem.Texts.Trim().Length > 0)
             {
                 CalculateTotalPagesSearch();
-                dataGridView.DataSource = SachDAO.Instance.GetCurrentRecordsByKeyword(CurrentPageIndexSearch, textbox_TimKiem.Texts);
+                dataGridView.DataSource = HoaDonDAO.Instance.GetCurrentRecordsByKeyword(CurrentPageIndexSearch, textbox_TimKiem.Texts);
             }
             else
             {
                 CalculateTotalPages();
-                dataGridView.DataSource = SachDAO.Instance.GetCurrentRecords(CurrentPageIndex);
+                dataGridView.DataSource = HoaDonDAO.Instance.GetCurrentRecords(CurrentPageIndex);
+            }
+        }
+
+        private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //show file pdf has name is MAHOADON in folder Bills
+            string path = Application.StartupPath + @"..\..\..\Bills\" + dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString() + ".pdf";
+            if (File.Exists(path)) {
+                System.Diagnostics.Process.Start(path);
+            }
+            else
+            {
+                MessageBox.Show("Bill not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -607,9 +542,6 @@ namespace QLS
         {
             dataGridView.ColumnHeadersDefaultCellStyle.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             dataGridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
-            button_Tao.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
-            button_ChinhSua.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
-            button_Xoa.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             textbox_TimKiem.BorderColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             textbox_TimKiem.BorderFocusColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             button_TienLen.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;

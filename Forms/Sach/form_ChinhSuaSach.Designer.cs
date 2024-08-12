@@ -361,6 +361,7 @@
             this.Controls.Add(this.textbox_MaSach);
             this.Controls.Add(this.pictureBox_AnhDaiDien);
             this.Name = "form_ChinhSuaSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_ChinhSuaSach";
             this.Load += new System.EventHandler(this.form_ChinhSuaSach_Load);
             this.panel_Top.ResumeLayout(false);

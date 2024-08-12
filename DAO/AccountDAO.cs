@@ -7,7 +7,7 @@ namespace QLS.Resources
     public class AccountDAO
     {
         private static AccountDAO instance;
-        private const int PgSize = 20;
+        private const int PgSize = 10;
         public static AccountDAO Instance
         {
             get { if (instance == null) instance = new AccountDAO(); return instance; }
@@ -137,9 +137,9 @@ namespace QLS.Resources
             }
             else
             {
-                int PreviousPageOffSet = (page - 1) * 20;
+                int PreviousPageOffSet = (page - 1) * PgSize;
 
-                cmd = @"Select TOP " + PgSize + " * from TAIKHOAN WHERE USERNAME NOT IN (Select TOP " + PreviousPageOffSet + " USERNAME from TAIKHOAN ORDER BY TAI_KHOAN)";
+                cmd = @"Select TOP " + PgSize + " * from TAIKHOAN WHERE USERNAME NOT IN (Select TOP " + PreviousPageOffSet + " USERNAME from TAIKHOAN ORDER BY USERNAME)";
             }
             try
             {
@@ -170,7 +170,7 @@ namespace QLS.Resources
                 }
                 else
                 {
-                   int PreviousPageOffSet = (page - 1) * 20;
+                   int PreviousPageOffSet = (page - 1) * PgSize;
                    
                    cmd = @"Select TOP " + PgSize + " * from TAIKHOAN WHERE USERNAME like '%" + keyword + "%' " +
                         "AND USERNAME NOT IN (Select TOP " + PreviousPageOffSet + " USERNAME " +

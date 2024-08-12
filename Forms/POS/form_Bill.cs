@@ -23,11 +23,12 @@ namespace QLS.Forms.POS
         public form_Bill(string MAHOADON, string TENKH, string SDT, List<ChiTietHoaDon> list)
         {
             InitializeComponent();
+            UpdateColorApp();
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            
+
             //dt report view
             HoaDon report = new HoaDon();
             DataTable dt = new DataTable();
@@ -45,12 +46,16 @@ namespace QLS.Forms.POS
             report.SetParameterValue("MAHOADON", MAHOADON);
             report.SetParameterValue("TENKH", TENKH);
             report.SetParameterValue("SDT", SDT);
-            report.SetParameterValue("TONGTIEN", list.Sum(x => x.THANHTIEN));
+            report.SetParameterValue("TONGTIEN", list.Sum(x => x.THANHTIEN).ToString("#,##0"));
             string NGAYLAP = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
             report.SetParameterValue("NGAYLAP", NGAYLAP);
 
             crystalReportViewer1.ReportSource = report;
             crystalReportViewer1.Refresh();
+
+            //save pdf to bill folder with filename is MAHOADON
+            string path = Application.StartupPath + @"..\..\..\Bills\" + MAHOADON + ".pdf";
+            report.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, path);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -66,7 +71,12 @@ namespace QLS.Forms.POS
         {
             this.Close();
         }
-    }
 
+        public void UpdateColorApp()
+        {
+            panel_Top.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_02;
+            button_Close.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_02;
+        }
+    }
 
 }

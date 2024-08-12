@@ -7,7 +7,7 @@ namespace QLS.Resources
     public class KhachHangDAO
     {
         private static KhachHangDAO instance;
-        private const int PgSize = 20;
+        private const int PgSize = 10;
         public static KhachHangDAO Instance
         {
             get { if (instance == null) instance = new KhachHangDAO(); return instance; }
@@ -59,7 +59,7 @@ namespace QLS.Resources
                 }
                 else
                 {
-                    int PreviousPageOffSet = (page - 1) * 20;
+                    int PreviousPageOffSet = (page - 1) * PgSize;
 
                     cmd = @"Select TOP " + PgSize + " * from KHACHHANG WHERE TENKH like '%" + keyword + "%' " +
                          "OR MAKH like '%" + keyword + "%'" +

@@ -180,7 +180,7 @@
             this.Controls.Add(this.pictureBox_IconThongBao);
             this.Controls.Add(this.label_NoiDung);
             this.Name = "form_XoaSach";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_XoaSach";
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();

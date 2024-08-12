@@ -106,6 +106,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -125,6 +126,7 @@
     <Compile Include="DAO\HoaDonDAO.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
     <Compile Include="DAO\SachDAO.cs" />
+    <Compile Include="DAO\ThongKeDAO.cs" />
     <Compile Include="DTO\ChiTietHoaDon.cs" />
     <Compile Include="DTO\EditCompo.cs" />
     <Compile Include="Forms\CaiDat\form_CaiDat.cs">
@@ -138,6 +140,18 @@
     </Compile>
     <Compile Include="Forms\fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HoaDon\form_HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HoaDon\form_HoaDon.Designer.cs">
+      <DependentUpon>form_HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KhachHang\form_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KhachHang\form_KhachHang.Designer.cs">
+      <DependentUpon>form_KhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\POS\form_Bill.cs">
       <SubType>Form</SubType>
@@ -180,6 +194,12 @@
     </Compile>
     <Compile Include="Forms\Sach\form_XoaSach.Designer.cs">
       <DependentUpon>form_XoaSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThongKe\form_ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThongKe\form_ThongKe.Designer.cs">
+      <DependentUpon>form_ThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ThongTin\form_CapNhatAnhDaiDien.cs">
       <SubType>Form</SubType>
@@ -266,6 +286,12 @@
     <EmbeddedResource Include="Forms\fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HoaDon\form_HoaDon.resx">
+      <DependentUpon>form_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KhachHang\form_KhachHang.resx">
+      <DependentUpon>form_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\POS\form_Bill.resx">
       <DependentUpon>form_Bill.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sach\form_XoaSach.resx">
       <DependentUpon>form_XoaSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThongKe\form_ThongKe.resx">
+      <DependentUpon>form_ThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThongTin\form_CapNhatAnhDaiDien.resx">
       <DependentUpon>form_CapNhatAnhDaiDien.cs</DependentUpon>
@@ -363,6 +392,8 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Bills\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

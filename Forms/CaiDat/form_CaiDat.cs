@@ -136,7 +136,6 @@ namespace QLS
             //Form Chính
             (this.Owner as form_Chinh).button_ThongTin.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
             (this.Owner as form_Chinh).button_KhuyenMai.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
-            (this.Owner as form_Chinh).button_BangXepHang.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
             (this.Owner as form_Chinh).button_HopThu.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
             (this.Owner as form_Chinh).button_DonDangKyIdol.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
             (this.Owner as form_Chinh).button_BaoCao.ForeColor = CaiDatDAO.Instance.color_Text_Black_01;
@@ -146,7 +145,6 @@ namespace QLS
 
             (this.Owner as form_Chinh).button_ThongTin.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
             (this.Owner as form_Chinh).button_KhuyenMai.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
-            (this.Owner as form_Chinh).button_BangXepHang.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
             (this.Owner as form_Chinh).button_HopThu.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
             (this.Owner as form_Chinh).button_DonDangKyIdol.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
             (this.Owner as form_Chinh).button_BaoCao.IconColor = CaiDatDAO.Instance.color_Text_Black_01;
@@ -202,7 +200,6 @@ namespace QLS
             //Form chính
             (this.Owner as form_Chinh).button_ThongTin.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
             (this.Owner as form_Chinh).button_KhuyenMai.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
-            (this.Owner as form_Chinh).button_BangXepHang.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
             (this.Owner as form_Chinh).button_HopThu.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
             (this.Owner as form_Chinh).button_DonDangKyIdol.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
             (this.Owner as form_Chinh).button_BaoCao.ForeColor = CaiDatDAO.Instance.color_Text_White_01;
@@ -212,7 +209,6 @@ namespace QLS
 
             (this.Owner as form_Chinh).button_ThongTin.IconColor = CaiDatDAO.Instance.color_Text_White_01;
             (this.Owner as form_Chinh).button_KhuyenMai.IconColor = CaiDatDAO.Instance.color_Text_White_01;
-            (this.Owner as form_Chinh).button_BangXepHang.IconColor = CaiDatDAO.Instance.color_Text_White_01;
             (this.Owner as form_Chinh).button_HopThu.IconColor = CaiDatDAO.Instance.color_Text_White_01;
             (this.Owner as form_Chinh).button_DonDangKyIdol.IconColor = CaiDatDAO.Instance.color_Text_White_01;
             (this.Owner as form_Chinh).button_BaoCao.IconColor = CaiDatDAO.Instance.color_Text_White_01;
@@ -282,7 +278,6 @@ namespace QLS
             //Form Chính
             (this.Owner as form_Chinh).button_ThongTin.Text = "Thông tin";
             (this.Owner as form_Chinh).button_KhuyenMai.Text = "Sách";
-            (this.Owner as form_Chinh).button_BangXepHang.Text = "Nhập kho";
             (this.Owner as form_Chinh).button_HopThu.Text = "Khách hàng";
             (this.Owner as form_Chinh).button_DonDangKyIdol.Text = "Máy POS";
             (this.Owner as form_Chinh).button_BaoCao.Text = "Hóa đơn";
@@ -315,7 +310,6 @@ namespace QLS
 
             //Form Chính
             (this.Owner as form_Chinh).button_ThongTin.Text = "Information";
-            (this.Owner as form_Chinh).button_BangXepHang.Text = "Import";
             (this.Owner as form_Chinh).button_KhuyenMai.Text = "Book";
             (this.Owner as form_Chinh).button_HopThu.Text = "Customer";
             (this.Owner as form_Chinh).button_DonDangKyIdol.Text = "POS";
@@ -574,7 +568,6 @@ namespace QLS
 
             (this.Owner as form_Chinh).button_ThongTin.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             (this.Owner as form_Chinh).button_KhuyenMai.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
-            (this.Owner as form_Chinh).button_BangXepHang.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             (this.Owner as form_Chinh).button_HopThu.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             (this.Owner as form_Chinh).button_DonDangKyIdol.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;
             (this.Owner as form_Chinh).button_BaoCao.BackColor = CaiDatDAO.Instance.color_BG_ColorApp_01;

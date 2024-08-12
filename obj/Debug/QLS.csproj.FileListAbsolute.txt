@@ -63,3 +63,6 @@ C:\Workspace\Winform\QLS\bin\Debug\log4net.dll
 C:\Workspace\Winform\QLS\bin\Debug\log4net.xml
 C:\Workspace\Winform\QLS\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Workspace\Winform\QLS\obj\Debug\QLS.Forms.POS.form_Bill.resources
+C:\Workspace\Winform\QLS\obj\Debug\QLS.form_HoaDon.resources
+C:\Workspace\Winform\QLS\obj\Debug\QLS.form_KhachHang.resources
+C:\Workspace\Winform\QLS\obj\Debug\QLS.Forms.ThongKe.form_ThongKe.resources

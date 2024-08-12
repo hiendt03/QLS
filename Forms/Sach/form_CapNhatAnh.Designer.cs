@@ -158,6 +158,7 @@
             this.Controls.Add(this.button_Huy);
             this.Controls.Add(this.crop_PictureBox_Custom);
             this.Name = "form_CapNhatAnh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_CapNhatAnh";
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();
